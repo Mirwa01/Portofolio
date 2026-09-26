@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mirwakhatul Jannah — Portofolio</title>
+<meta name="description" content="Portofolio Mirwakhatul Jannah, fresh graduate S1 Administrasi Bisnis, Universitas Yudharta Pasuruan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F3ECDD;
+    --paper:#FBF8F1;
+    --ink:#241A12;
+    --ink-soft:#5B4E3F;
+    --espresso:#2A1C13;
+    --brass:#A5763F;
+    --brass-deep:#7C572C;
+    --line:#DFD2B6;
+    --max:880px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Public Sans",sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:"Fraunces",serif;
+    font-weight:600;
+    color:var(--ink);
+    margin:0;
+  }
+  a{color:var(--brass-deep);}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+  .rule{height:1px;background:var(--line);}
+
+  /* ledger paper texture */
+  .ledger{
+    background-image:repeating-linear-gradient(
+      to bottom, transparent, transparent 37px, var(--line) 38px
+    );
+  }
+
+  /* top bar */
+  header.top{
+    position:sticky;top:0;z-index:10;
+    background:rgba(243,236,221,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  header.top .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 24px;
+  }
+  .brand{font-family:"Fraunces",serif;font-size:1.05rem;font-weight:600;letter-spacing:.02em;}
+  .top a.cta{
+    font-size:.85rem;font-weight:600;color:var(--paper);
+    background:var(--espresso);padding:9px 16px;border-radius:2px;text-decoration:none;
+  }
+
+  /* clip icon */
+  .clip{display:inline-block;width:16px;height:16px;vertical-align:-3px;margin-right:8px;}
+  .clip path{fill:none;stroke:var(--brass);stroke-width:9;}
+
+  .eyebrow{
+    display:flex;align-items:center;
+    font-size:.95rem;color:var(--brass-deep);font-weight:600;
+    margin-bottom:14px;
+  }
+
+  /* hero */
+  .hero{padding:76px 0 60px;}
+  .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;}
+  .hero h1{font-size:2.6rem;line-height:1.08;}
+  .hero .role{
+    margin-top:10px;font-size:1.15rem;color:var(--ink-soft);font-family:"Fraunces",serif;font-style:italic;
+  }
+  .hero p.lede{margin-top:18px;max-width:52ch;color:var(--ink-soft);}
+  .hero .edu{margin-top:16px;font-size:.92rem;color:var(--brass-deep);}
+  .hero .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    text-decoration:none;font-weight:600;font-size:.92rem;
+    padding:12px 20px;border-radius:2px;display:inline-block;
+  }
+  .btn.primary{background:var(--espresso);color:var(--paper);}
+  .btn.ghost{border:1px solid var(--brass);color:var(--brass-deep);}
+  .hero .portrait{
+    display:flex;justify-content:center;
+  }
+  .hero .portrait img{
+    width:100%;max-width:300px;
+    filter:drop-shadow(0 18px 26px rgba(42,28,19,.22));
+  }
+
+  section{padding:56px 0;}
+  .section-head{max-width:60ch;margin-bottom:34px;}
+  .section-head h2{font-size:1.7rem;}
+  .section-head p{color:var(--ink-soft);margin-top:8px;}
+
+  /* about */
+  .about-card{
+    background:var(--paper);border:1px solid var(--line);
+    padding:30px 32px;border-radius:2px;
+  }
+  .about-card p{margin:0 0 14px;color:var(--ink-soft);}
+  .about-card p:last-child{margin-bottom:0;}
+
+  /* timeline */
+  .tl-item{
+    display:grid;grid-template-columns:150px 1fr;gap:26px;
+    padding:26px 0;border-top:1px solid var(--line);
+  }
+  .tl-item:last-child{border-bottom:1px solid var(--line);}
+  .tl-date{color:var(--brass-deep);font-weight:600;font-size:.88rem;padding-top:3px;}
+  .tl-body h3{font-size:1.15rem;}
+  .tl-org{color:var(--ink-soft);font-size:.92rem;margin-top:2px;}
+  .tl-body ul{margin:14px 0 0;padding-left:18px;color:var(--ink-soft);font-size:.95rem;}
+  .tl-body li{margin-bottom:5px;}
+  .tl-photos{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap;}
+  .tl-photos img{
+    width:96px;height:96px;object-fit:cover;border-radius:2px;border:1px solid var(--line);
+  }
+  .tl-photos img.wide{width:150px;}
+
+  @media (max-width:640px){
+    .tl-item{grid-template-columns:1fr;gap:6px;}
+  }
+
+  /* org experience */
+  .org-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .org-card{background:var(--paper);border:1px solid var(--line);padding:20px 22px;border-radius:2px;}
+  .org-card .badge{
+    display:inline-block;font-size:.75rem;font-weight:700;color:var(--paper);
+    background:var(--brass-deep);padding:3px 9px;border-radius:2px;margin-bottom:10px;
+  }
+  .org-card h3{font-size:1.05rem;}
+  .org-card p{color:var(--ink-soft);font-size:.92rem;margin:8px 0 0;}
+  @media (max-width:640px){.org-grid{grid-template-columns:1fr;}}
+
+  /* thesis */
+  .thesis{background:var(--espresso);color:var(--cream);border-radius:2px;padding:34px 36px;}
+  .thesis h3{color:var(--paper);font-size:1.3rem;font-weight:500;font-style:italic;}
+  .thesis dl{margin:22px 0 0;display:grid;gap:18px;}
+  .thesis dt{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:#D9C39A;font-weight:600;}
+  .thesis dd{margin:5px 0 0;color:#EDE4D2;font-size:.95rem;}
+
+  /* certificate */
+  .cert-wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;}
+  .cert-wrap img{width:100%;border-radius:2px;border:1px solid var(--line);}
+  .chip-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px;}
+  .chip{
+    font-size:.85rem;background:var(--paper);border:1px solid var(--line);
+    padding:7px 13px;border-radius:20px;color:var(--ink-soft);
+  }
+  .cert-meta{color:var(--ink-soft);font-size:.9rem;margin-top:14px;}
+  @media (max-width:700px){.cert-wrap{grid-template-columns:1fr;}}
+
+  /* skills */
+  .skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;}
+  .skill-col h3{font-size:1rem;font-family:"Public Sans",sans-serif;font-weight:700;margin-bottom:14px;}
+  .logos{display:flex;gap:16px;align-items:center;margin-bottom:16px;}
+  .logos img{height:22px;width:auto;}
+  @media (max-width:640px){.skill-grid{grid-template-columns:1fr;}}
+
+  /* footer */
+  footer{background:var(--espresso);color:var(--cream);padding:64px 0 32px;margin-top:20px;}
+  footer h2{color:var(--paper);font-size:1.8rem;}
+  footer p.msg{color:#D9CBB0;max-width:56ch;margin-top:14px;}
+  .contact-list{margin-top:28px;display:flex;flex-direction:column;gap:10px;}
+  .contact-list a{color:var(--paper);text-decoration:none;font-weight:600;}
+  .contact-list span{color:#B7A788;font-size:.85rem;display:inline-block;width:96px;}
+  footer .foot-rule{margin-top:44px;border-top:1px solid #4A3A29;padding-top:20px;font-size:.8rem;color:#9C8A6C;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <span class="brand">Mirwakhatul Jannah</span>
+    <a class="cta" href="https://wa.me/6282122949448" target="_blank" rel="noopener">Hubungi Saya</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <p class="eyebrow"><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Portofolio</p>
+      <h1>Mirwakhatul Jannah</h1>
+      <p class="role">Fresh Graduate — Administrasi Bisnis</p>
+      <p class="lede">Teliti, mudah beradaptasi, dan terbiasa memegang tanggung jawab keuangan sejak bangku sekolah. Siap berkontribusi di bidang Finance &amp; Administration, SDM, atau Pemasaran.</p>
+      <p class="edu">S1 Administrasi Bisnis — Universitas Yudharta Pasuruan · IPK 3,4 · 2022–2024</p>
+      <div class="actions">
+        <a class="btn primary" href="mailto:mirwakhatuljannah.01@gmail.com">Kirim Email</a>
+        <a class="btn ghost" href="https://wa.me/6282122949448" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="assets/hero-portrait.png" alt="Foto Mirwakhatul Jannah" width="300" height="447">
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule"></div></div>
+
+<section id="tentang">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Tentang Saya</h2>
+    </div>
+    <div class="about-card">
+      <p>Lulusan Sarjana Administrasi Bisnis dengan pemahaman menyeluruh tentang manajemen operasi, keuangan, sumber daya manusia, dan perilaku konsumen. Memiliki pengalaman magang di divisi SDM/Personalia serta pengalaman kerja di bidang pelayanan pelanggan, sales, dan marketing.</p>
+      <p>Sejak SMP saya dipercaya memegang tabungan kelas sebagai Bendahara III, lalu di SMA menjadi Bendahara I sekaligus sesekali merangkap Sekretaris Kelas selama dua tahun. Tanggung jawab itu terasa dekat dengan keseharian di rumah — pada waktu yang sama, Ibu menjabat Bendahara Puskesmas dan Ayah merangkap Bendahara Dusun. Dari sana tumbuh kebiasaan teliti dan disiplin mengelola keuangan yang saya bawa hingga bangku kuliah dan dunia kerja.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pengalaman" class="ledger">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Pengalaman</h2>
+      <p>Pengalaman ini membentuk saya menjadi pribadi yang lebih responsif, teliti, dan mampu bekerja dalam tim.</p>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date">Sep – Des 2025</div>
+      <div class="tl-body">
+        <h3>Magang Industri (MBKM) — Asisten Manajer SDM &amp; Pengadaan</h3>
+        <div class="tl-org">PT Sinergi Gula Nusantara, PG Kedawoeng — Kab. Pasuruan</div>
+        <ul>
+          <li>Membantu pengelolaan data karyawan.</li>
+          <li>Melakukan administrasi dan pengarsipan dokumen.</li>
+          <li>Membantu proses administrasi kepegawaian.</li>
+          <li>Mendukung kegiatan pelatihan dan pengembangan SDM.</li>
+          <li>Melakukan koordinasi dengan tim terkait dalam kegiatan operasional divisi.</li>
+        </ul>
+        <div class="tl-photos">
+          <img class="wide" src="assets/magang-kantor.jpg" alt="Kantor PG Kedawoeng">
+          <img src="assets/magang-1.jpg" alt="Kegiatan magang 1">
+          <img src="assets/magang-2.jpg" alt="Kegiatan magang 2">
+          <img src="assets/magang-3.jpg" alt="Kegiatan magang 3">
+          <img src="assets/magang-4.jpg" alt="Kegiatan magang 4">
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-date">Jan 2024 – Jul 2025</div>
+      <div class="tl-body">
+        <h3>Karyawan Operasional — DFC Cafe &amp; Resto</h3>
+        <div class="tl-org">CV. D'Umbulan Management — Kab. Pasuruan</div>
+        <ul>
+          <li>Melakukan perhitungan dan pencatatan keuangan operasional.</li>
+          <li>Menangani pelayanan pelanggan.</li>
+          <li>Melakukan aktivitas sales dan marketing.</li>
+          <li>Membantu pengelolaan distribusi barang serta operasional cabang.</li>
+          <li>Membantu proses produksi di dapur pusat.</li>
+        </ul>
+        <div class="tl-photos">
+          <img class="wide" src="assets/kerja-dfc.jpg" alt="DFC Cafe & Resto">
+          <img src="assets/kerja-catatan.jpg" alt="Catatan keuangan operasional">
+          <img src="assets/kerja-kas.jpg" alt="Pengelolaan kas">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="organisasi">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Pengalaman Organisasi</h2>
+    </div>
+    <div class="org-grid">
+      <div class="org-card">
+        <span class="badge">2 Tahun</span>
+        <h3>Bendahara I Kelas (merangkap Sekretaris)</h3>
+        <p>SMAN 1 Gondangwetan — mengelola dan mencatat keuangan kas kelas secara rutin, sesekali merangkap tugas sekretaris kelas.</p>
+      </div>
+      <div class="org-card">
+        <span class="badge">1 Tahun</span>
+        <h3>Bendahara III Kelas</h3>
+        <p>Sekolah Menengah Pertama — bertanggung jawab memegang dan mengelola tabungan kelas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skripsi" class="ledger">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Proyek Akademik</h2>
+      <p>Penerapan ilmu yang dipelajari selama perkuliahan, khususnya pada bidang manajemen keuangan.</p>
+    </div>
+    <div class="thesis">
+      <h3>Cash Holding dan Financial Performance, serta Digital Transformation sebagai Moderasi pada Perusahaan Induk BUMN Indonesia</h3>
+      <dl>
+        <div>
+          <dt>Latar Belakang</dt>
+          <dd>Penurunan financial performance BUMN akibat pandemi, disertai percepatan digital transformation dan kebutuhan pengelolaan cash holding, serta inkonsistensi penelitian terdahulu.</dd>
+        </div>
+        <div>
+          <dt>Tujuan</dt>
+          <dd>Menganalisis pengaruh cash holding terhadap financial performance, pengaruh digital transformation, serta peran digital transformation sebagai moderasi pada perusahaan induk BUMN Indonesia.</dd>
+        </div>
+        <div>
+          <dt>Metode</dt>
+          <dd>Pendekatan kuantitatif eksplanatori, data sekunder, purposive sampling atas 15 perusahaan (75 observasi), dianalisis dengan Moderated Regression Analysis (MRA).</dd>
+        </div>
+        <div>
+          <dt>Hasil Utama</dt>
+          <dd>Cash holding berpengaruh positif dan signifikan terhadap financial performance; digital transformation berpengaruh positif namun tidak signifikan, dan efek moderasinya juga tidak signifikan.</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="sertifikasi">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Sertifikasi</h2>
+      <p>Bukti komitmen untuk terus mengembangkan kompetensi.</p>
+    </div>
+    <div class="cert-wrap">
+      <img src="assets/sertifikat.jpg" alt="Sertifikat Pelatihan Kompetensi Mahasiswa 2026">
+      <div>
+        <h3 style="font-size:1.1rem;">Pelatihan Kompetensi Mahasiswa 2026</h3>
+        <div class="cert-meta">Skema Kualifikasi 5 Bidang Kewirausahaan Industri<br>UPT Kewirausahaan dan Pengembangan Karier, Universitas Yudharta Pasuruan · 20–25 Juli 2026</div>
+        <div class="chip-row">
+          <span class="chip">Manajemen SDM</span>
+          <span class="chip">Manajemen Operasi</span>
+          <span class="chip">Perilaku Organisasi</span>
+          <span class="chip">Kewirausahaan</span>
+          <span class="chip">Perilaku Konsumen</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="keahlian" class="ledger">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Keahlian</h2>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-col">
+        <h3>Technical Skills</h3>
+        <div class="logos">
+          <img src="assets/logo-office.png" alt="Microsoft Office">
+          <img src="assets/logo-google.png" alt="Google Workspace">
+        </div>
+        <div class="chip-row">
+          <span class="chip">Digital Marketing</span>
+          <span class="chip">Online Marketing</span>
+          <span class="chip">Content Marketing &amp; Editing</span>
+          <span class="chip">Financial Analysis</span>
+          <span class="chip">Risk Analysis</span>
+          <span class="chip">Product Research</span>
+          <span class="chip">Sales &amp; Marketing</span>
+        </div>
+      </div>
+      <div class="skill-col">
+        <h3>Soft Skills</h3>
+        <div class="chip-row">
+          <span class="chip">Communication</span>
+          <span class="chip">Presentation</span>
+          <span class="chip">Leadership</span>
+          <span class="chip">Team Management</span>
+          <span class="chip">Marketing Strategy</span>
+          <span class="chip">Planning &amp; Scheduling</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="kontak">
+  <div class="wrap">
+    <h2>Mari terhubung</h2>
+    <p class="msg">Terima kasih telah meluangkan waktu untuk melihat portofolio saya. Saya sangat terbuka untuk kesempatan kerja dan siap memberikan kontribusi terbaik di bidang Finance &amp; Administration.</p>
+    <div class="contact-list">
+      <div><span>Email</span><a href="mailto:mirwakhatuljannah.01@gmail.com">mirwakhatuljannah.01@gmail.com</a></div>
+      <div><span>WhatsApp</span><a href="https://wa.me/6282122949448" target="_blank" rel="noopener">+62 821-2294-9448</a></div>
+      <div><span>Lokasi</span><span style="width:auto;color:var(--paper);font-weight:600;">Pasuruan, Jawa Timur</span></div>
+    </div>
+    <div class="foot-rule">
+      <span>© 2026 Mirwakhatul Jannah</span>
+      <span>Dibuat dari portofolio pribadi</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

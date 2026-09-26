@@ -3,414 +3,399 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#2A1C13">
+<meta name="theme-color" content="#107C76">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>Mirwakhatul Jannah — Portofolio</title>
 <meta name="description" content="Portofolio Mirwakhatul Jannah, fresh graduate S1 Administrasi Bisnis, Universitas Yudharta Pasuruan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script>document.documentElement.classList.add('js');</script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --cream:#F3ECDD; --paper:#FBF8F1; --ink:#241A12; --ink-soft:#5B4E3F;
-    --espresso:#2A1C13; --brass:#A5763F; --brass-deep:#7C572C; --line:#DFD2B6;
-    --max:880px;
+    --bg:#FFFFFF; --bg-soft:#F5F6F3; --ink:#12141A; --ink-soft:#63666F;
+    --teal:#107C76; --teal-deep:#0B5B57; --amber:#F5A623;
+    --line:#EAEBE7; --ring:rgba(16,124,118,.16);
+    --max:1040px; --r:22px;
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   html{scroll-behavior:smooth;}
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
-  body{
-    margin:0;background:var(--cream);color:var(--ink);
-    font-family:"Public Sans",sans-serif;line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-    padding-bottom:env(safe-area-inset-bottom,0);
-  }
-  h1,h2,h3{font-family:"Fraunces",serif;font-weight:600;color:var(--ink);margin:0;}
-  a{color:var(--brass-deep);}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-weight:800;color:var(--ink);margin:0;letter-spacing:-.02em;}
+  a{color:var(--teal-deep);}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
-  .rule{height:1px;background:var(--line);}
-  .ledger{background-image:repeating-linear-gradient(to bottom, transparent, transparent 37px, var(--line) 38px);}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-deep);background:var(--ring);padding:6px 14px;border-radius:999px;margin-bottom:16px;}
+  .section-head{max-width:60ch;margin-bottom:34px;}
+  .section-head h2{font-size:1.9rem;}
+  .section-head p{color:var(--ink-soft);margin-top:8px;font-size:.98rem;}
+  section{padding:64px 0;}
+  section.soft{background:var(--bg-soft);}
 
-  header.top{
-    position:sticky;top:0;z-index:20;background:rgba(243,236,221,.92);backdrop-filter:blur(6px);
-    border-bottom:1px solid transparent;
-    padding-top:env(safe-area-inset-top,0);
-    transition:border-color .25s ease, box-shadow .25s ease;
-  }
-  header.top.scrolled{border-color:var(--line);box-shadow:0 6px 18px rgba(42,28,19,.06);}
-  header.top .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;}
-  .brand{font-family:"Fraunces",serif;font-size:1.05rem;font-weight:600;letter-spacing:.02em;}
-  .top a.cta{font-size:.85rem;font-weight:600;color:var(--paper);background:var(--espresso);padding:9px 16px;border-radius:2px;text-decoration:none;}
-
-  .clip{display:inline-block;width:16px;height:16px;vertical-align:-3px;margin-right:8px;flex-shrink:0;}
-  .clip path{fill:none;stroke:var(--brass);stroke-width:9;}
-  .eyebrow{display:flex;align-items:center;font-size:.95rem;color:var(--brass-deep);font-weight:600;margin-bottom:12px;}
-
-  .hero{padding:52px 0 44px;}
-  .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;}
-  .hero h1{font-size:2.4rem;line-height:1.08;}
-  .hero .role{margin-top:8px;font-size:1.1rem;color:var(--ink-soft);font-family:"Fraunces",serif;font-style:italic;}
-  .hero p.lede{margin-top:14px;max-width:50ch;color:var(--ink-soft);}
-  .hero .edu{margin-top:12px;font-size:.88rem;color:var(--brass-deep);}
-  .hero .actions{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;}
-  .btn{text-decoration:none;font-weight:600;font-size:.92rem;padding:12px 20px;border-radius:2px;display:inline-block;}
-  .btn.primary{background:var(--espresso);color:var(--paper);}
-  .btn.ghost{border:1px solid var(--brass);color:var(--brass-deep);}
-  .hero .portrait{display:flex;justify-content:center;}
-  .hero .portrait img{width:100%;max-width:250px;filter:drop-shadow(0 18px 26px rgba(42,28,19,.22));}
-
-  section{padding:40px 0;}
-  .section-head{max-width:60ch;margin-bottom:26px;}
-  .section-head h2{font-size:1.55rem;display:flex;align-items:center;}
-  .section-head p{color:var(--ink-soft);margin-top:6px;font-size:.94rem;}
-
-  .about-card{background:var(--paper);border:1px solid var(--line);padding:26px 28px;border-radius:2px;}
-  .about-card p{margin:0;color:var(--ink-soft);}
-
-  /* reveal-on-scroll — only hides content once JS confirms it can reveal it again (see head script) */
-  .js .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+  .js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
   .js .reveal.in{opacity:1;transform:none;}
   @media (prefers-reduced-motion:reduce){ .js .reveal{opacity:1;transform:none;transition:none;} }
 
-  /* experience accordion */
-  .tl-item{padding:20px 0;border-top:1px solid var(--line);}
-  .tl-item:last-child{border-bottom:1px solid var(--line);}
-  .tl-top{display:grid;grid-template-columns:130px 1fr;gap:22px;}
-  .tl-date{color:var(--brass-deep);font-weight:600;font-size:.86rem;padding-top:2px;}
-  .tl-body h3{font-size:1.1rem;}
-  .tl-org{color:var(--ink-soft);font-size:.9rem;margin-top:2px;}
-  .tl-toggle{
-    margin-top:12px;background:none;border:1px solid var(--line);color:var(--brass-deep);
-    font:inherit;font-size:.85rem;font-weight:600;padding:7px 14px;border-radius:20px;
-    cursor:pointer;display:inline-flex;align-items:center;gap:6px;
+  header{position:sticky;top:0;z-index:30;padding:16px 0;transition:box-shadow .25s ease, background .25s ease;}
+  header.scrolled{background:rgba(255,255,255,.85);backdrop-filter:blur(10px);box-shadow:0 8px 24px rgba(18,20,26,.06);}
+  header .bar{display:flex;align-items:center;justify-content:space-between;}
+  .brand{font-weight:800;font-size:1.05rem;}
+  .brand span{color:var(--teal);}
+  .cta{text-decoration:none;font-weight:700;font-size:.86rem;color:#fff;background:var(--ink);padding:10px 20px;border-radius:999px;transition:background .2s ease,transform .2s ease;}
+  .cta:hover{background:var(--teal-deep);transform:translateY(-1px);}
+
+  .hero{position:relative;overflow:hidden;padding:56px 0 60px;}
+  .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.4;z-index:0;animation:float 11s ease-in-out infinite;}
+  .blob.b1{width:340px;height:340px;background:var(--teal);top:-100px;right:-60px;}
+  .blob.b2{width:260px;height:260px;background:var(--amber);bottom:-80px;left:-40px;animation-delay:-4s;}
+  @media (prefers-reduced-motion:reduce){ .blob{animation:none;} }
+  @keyframes float{0%,100%{transform:translate(0,0);}50%{transform:translate(24px,-26px);}}
+  .hero .grid{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.05;}
+  .hero .role{margin-top:10px;font-size:1.1rem;color:var(--teal-deep);font-weight:700;}
+  .hero p.lede{margin-top:16px;max-width:50ch;color:var(--ink-soft);}
+  .hero .edu{margin-top:14px;font-size:.88rem;color:var(--ink-soft);}
+  .hero .edu b{color:var(--ink);}
+  .hero .actions{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{text-decoration:none;font-weight:700;font-size:.92rem;padding:13px 24px;border-radius:999px;display:inline-block;transition:transform .2s ease,box-shadow .2s ease;}
+  .btn.primary{background:var(--teal);color:#fff;box-shadow:0 10px 24px rgba(16,124,118,.28);}
+  .btn.primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(16,124,118,.36);}
+  .btn.ghost{border:2px solid var(--ink);color:var(--ink);}
+  .btn.ghost:hover{background:var(--ink);color:#fff;}
+  .hero .portrait{display:flex;justify-content:center;position:relative;}
+  .hero .portrait::before{content:"";position:absolute;width:78%;height:92%;background:linear-gradient(160deg,var(--teal),var(--amber));border-radius:32px;transform:rotate(-6deg);z-index:0;opacity:.9;}
+  .hero .portrait img{position:relative;z-index:1;width:100%;max-width:260px;border-radius:28px;box-shadow:0 24px 48px rgba(18,20,26,.18);}
+  @media (max-width:780px){
+    .hero .grid{grid-template-columns:1fr;gap:28px;}
+    .hero .portrait{order:-1;max-width:220px;margin:0 auto;}
   }
-  .tl-toggle:hover{border-color:var(--brass);}
-  .tl-toggle svg{width:10px;height:10px;transition:transform .3s ease;}
-  .tl-toggle[aria-expanded="true"] svg{transform:rotate(180deg);}
-  .tl-panel{overflow:hidden;max-height:0;transition:max-height .35s ease;}
-  .tl-panel-inner{padding-top:16px;}
-  .tl-body ul{margin:0;padding-left:18px;color:var(--ink-soft);font-size:.95rem;}
-  .tl-body li{margin-bottom:5px;}
-  .tl-photos{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
-  .tl-photos img{width:88px;height:88px;object-fit:cover;border-radius:2px;border:1px solid var(--line);}
-  .tl-photos img.wide{width:140px;}
-  @media (max-width:640px){ .tl-top{grid-template-columns:1fr;gap:4px;} }
+
+  .about-card{background:var(--bg-soft);border:1px solid var(--line);padding:30px 32px;border-radius:var(--r);}
+  .about-card p{margin:0;color:var(--ink-soft);font-size:1.02rem;}
+
+  .exp-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:26px 28px;margin-bottom:18px;position:relative;overflow:hidden;transition:box-shadow .25s ease,transform .25s ease;}
+  .exp-card:hover{box-shadow:0 16px 36px rgba(18,20,26,.08);transform:translateY(-2px);}
+  .exp-num{position:absolute;right:20px;top:6px;font-size:3.6rem;font-weight:800;color:var(--bg-soft);z-index:0;line-height:1;}
+  .exp-card>*{position:relative;z-index:1;}
+  .exp-date{color:var(--teal-deep);font-weight:700;font-size:.84rem;text-transform:uppercase;letter-spacing:.05em;}
+  .exp-card h3{font-size:1.15rem;margin-top:6px;}
+  .exp-org{color:var(--ink-soft);font-size:.92rem;margin-top:2px;}
+  .toggle{margin-top:16px;background:none;border:1.5px solid var(--line);color:var(--teal-deep);font:inherit;font-size:.85rem;font-weight:700;padding:8px 16px;border-radius:999px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:border-color .2s ease;}
+  .toggle:hover{border-color:var(--teal);}
+  .toggle svg{width:10px;height:10px;transition:transform .3s ease;}
+  .toggle[aria-expanded="true"] svg{transform:rotate(180deg);}
+  .panel{max-height:0;overflow:hidden;transition:max-height .4s ease;}
+  .panel.open{max-height:1400px;}
+  .panel-inner{padding-top:16px;}
+  .exp-card ul{margin:0;padding-left:18px;color:var(--ink-soft);font-size:.95rem;}
+  .exp-card li{margin-bottom:6px;}
+  .photos{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+  .photos img{width:86px;height:86px;object-fit:cover;border-radius:12px;border:1px solid var(--line);}
+  .photos img.wide{width:138px;}
+  @media (max-width:640px){ .exp-num{display:none;} }
 
   .org-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .org-card{background:var(--paper);border:1px solid var(--line);padding:18px 20px;border-radius:2px;}
-  .org-card .badge{display:inline-block;font-size:.72rem;font-weight:700;color:var(--paper);background:var(--brass-deep);padding:3px 9px;border-radius:2px;margin-bottom:8px;}
-  .org-card h3{font-size:1rem;}
-  .org-card p{color:var(--ink-soft);font-size:.9rem;margin:6px 0 0;}
+  .org-card{background:var(--bg);border:1px solid var(--line);padding:22px 24px;border-radius:var(--r);}
+  .org-card .badge{display:inline-block;font-size:.72rem;font-weight:700;color:var(--teal-deep);background:var(--ring);padding:4px 11px;border-radius:999px;margin-bottom:10px;}
+  .org-card h3{font-size:1.02rem;}
+  .org-card p{color:var(--ink-soft);font-size:.9rem;margin:8px 0 0;}
   @media (max-width:640px){.org-grid{grid-template-columns:1fr;}}
 
-  /* thesis accordion */
-  .thesis{background:var(--espresso);color:var(--cream);border-radius:2px;padding:28px 30px;}
-  .thesis h3{color:var(--paper);font-size:1.2rem;font-weight:500;font-style:italic;}
-  .thesis .tl-toggle{border-color:#54402C;color:#E4C79A;margin-top:14px;}
-  .thesis .tl-toggle:hover{border-color:var(--brass);}
-  .thesis dl{margin:0;display:grid;gap:16px;}
-  .thesis dt{font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;color:#D9C39A;font-weight:600;}
-  .thesis dd{margin:4px 0 0;color:#EDE4D2;font-size:.94rem;}
+  .thesis{background:var(--ink);color:#fff;border-radius:var(--r);padding:32px 34px;}
+  .thesis h3{color:#fff;font-size:1.25rem;font-weight:700;}
+  .thesis .toggle{border-color:#3A3D46;color:var(--amber);}
+  .thesis .toggle:hover{border-color:var(--amber);}
+  .thesis dl{margin:0;display:grid;gap:18px;}
+  .thesis dt{font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;color:var(--amber);font-weight:700;}
+  .thesis dd{margin:5px 0 0;color:#D8DAE0;font-size:.95rem;}
 
-  /* cert + skills combined */
-  .cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start;}
-  .cert-wrap img{width:100%;border-radius:2px;border:1px solid var(--line);}
-  .cert-meta{color:var(--ink-soft);font-size:.88rem;margin-top:12px;}
+  .cs-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;}
+  .cert-wrap{position:relative;}
+  .cert-wrap img{width:100%;border-radius:var(--r);border:1px solid var(--line);box-shadow:0 16px 36px rgba(18,20,26,.08);}
+  .cert-meta{color:var(--ink-soft);font-size:.88rem;margin-top:14px;}
   .chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
-  .chip{font-size:.82rem;background:var(--paper);border:1px solid var(--line);padding:6px 12px;border-radius:20px;color:var(--ink-soft);}
-  .skill-col h3{font-size:.95rem;font-family:"Public Sans",sans-serif;font-weight:700;margin-bottom:12px;}
-  .skill-col + .skill-col{margin-top:22px;}
-  .logos{display:flex;gap:14px;align-items:center;margin-bottom:12px;}
-  .logos img{height:20px;width:auto;}
+  .chip{font-size:.82rem;background:var(--ring);color:var(--teal-deep);padding:7px 14px;border-radius:999px;font-weight:600;}
+  .chip.amber{background:rgba(245,166,35,.15);color:#9A6210;}
+  .skill-col h3{font-size:.95rem;font-weight:800;margin-bottom:12px;}
+  .skill-col + .skill-col{margin-top:24px;}
   @media (max-width:700px){.cs-grid{grid-template-columns:1fr;}}
 
-  footer{background:var(--espresso);color:var(--cream);padding:48px 0 24px;margin-top:12px;padding-bottom:calc(24px + env(safe-area-inset-bottom,0));}
-  footer h2{color:var(--paper);font-size:1.6rem;}
-  footer p.msg{color:#D9CBB0;max-width:56ch;margin-top:12px;font-size:.94rem;}
-  .contact-list{margin-top:22px;display:flex;flex-direction:column;gap:9px;}
-  .contact-list a{color:var(--paper);text-decoration:none;font-weight:600;}
-  .contact-list span{color:#B7A788;font-size:.85rem;display:inline-block;width:90px;}
-  footer .foot-rule{margin-top:34px;border-top:1px solid #4A3A29;padding-top:18px;font-size:.78rem;color:#9C8A6C;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+  footer{background:var(--ink);color:#fff;padding:56px 0 28px;padding-bottom:calc(28px + env(safe-area-inset-bottom,0));}
+  footer h2{color:#fff;font-size:2rem;}
+  footer p.msg{color:#AEB1BA;max-width:56ch;margin-top:12px;}
+  .contact-list{margin-top:24px;display:flex;flex-direction:column;gap:10px;}
+  .contact-list a{color:#fff;text-decoration:none;font-weight:700;}
+  .contact-list span.k{color:#8A8D97;font-size:.85rem;display:inline-block;width:90px;}
+  footer .foot-rule{margin-top:36px;border-top:1px solid #292C34;padding-top:18px;font-size:.78rem;color:#71747D;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 
-  /* back to top */
-  #totop{
-    position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0));
-    width:42px;height:42px;border-radius:50%;border:none;
-    background:var(--espresso);color:var(--cream);cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
-    opacity:0;visibility:hidden;transform:translateY(8px);
-    transition:opacity .25s ease, transform .25s ease, visibility .25s;
-    box-shadow:0 8px 20px rgba(42,28,19,.28);z-index:30;
-  }
+  #totop{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0));width:44px;height:44px;border-radius:50%;border:none;background:var(--ink);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s;box-shadow:0 10px 24px rgba(18,20,26,.3);z-index:40;}
   #totop.show{opacity:1;visibility:visible;transform:none;}
   #totop svg{width:16px;height:16px;}
 </style>
 </head>
 <body>
+<div id="root"></div>
 
-<header class="top" id="siteHeader">
-  <div class="wrap">
-    <span class="brand">Mirwakhatul Jannah</span>
-    <a class="cta" href="https://wa.me/6282122949448" target="_blank" rel="noopener">Hubungi Saya</a>
-  </div>
-</header>
+<script>document.documentElement.classList.add('js');</script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-<section class="hero">
-  <div class="wrap grid">
-    <div>
-      <p class="eyebrow"><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Portofolio</p>
-      <h1>Mirwakhatul Jannah</h1>
-      <p class="role">Fresh Graduate — Administrasi Bisnis</p>
-      <p class="lede">Teliti, mudah beradaptasi, dan terbiasa memegang tanggung jawab keuangan sejak sekolah. Siap berkontribusi di bidang Finance &amp; Administration, SDM, atau Pemasaran.</p>
-      <p class="edu">S1 Administrasi Bisnis — Universitas Yudharta Pasuruan · IPK 3,4</p>
-      <div class="actions">
-        <a class="btn primary" href="mailto:mirwakhatuljannah.01@gmail.com">Kirim Email</a>
-        <a class="btn ghost" href="https://wa.me/6282122949448" target="_blank" rel="noopener">WhatsApp</a>
+<script type="text/plain" id="app-source">
+const { useState, useEffect, useRef } = React;
+
+const EXPERIENCE = [
+  { date:"Sep – Des 2025", title:"Magang Industri (MBKM) — Asisten Manajer SDM & Pengadaan", org:"PT Sinergi Gula Nusantara, PG Kedawoeng — Kab. Pasuruan",
+    bullets:["Membantu pengelolaan data karyawan.","Melakukan administrasi dan pengarsipan dokumen.","Membantu proses administrasi kepegawaian.","Mendukung kegiatan pelatihan dan pengembangan SDM.","Melakukan koordinasi dengan tim terkait dalam kegiatan operasional divisi."],
+    photos:[["assets/magang-kantor.jpg","Kantor PG Kedawoeng",true],["assets/magang-1.jpg","Kegiatan magang 1"],["assets/magang-2.jpg","Kegiatan magang 2"],["assets/magang-3.jpg","Kegiatan magang 3"],["assets/magang-4.jpg","Kegiatan magang 4"]] },
+  { date:"Jan 2024 – Jul 2025", title:"Karyawan Operasional — DFC Cafe & Resto", org:"CV. D'Umbulan Management — Kab. Pasuruan",
+    bullets:["Melakukan perhitungan dan pencatatan keuangan operasional.","Menangani pelayanan pelanggan.","Melakukan aktivitas sales dan marketing.","Membantu pengelolaan distribusi barang serta operasional cabang.","Membantu proses produksi di dapur pusat."],
+    photos:[["assets/kerja-dfc.jpg","DFC Cafe & Resto",true],["assets/kerja-catatan.jpg","Catatan keuangan operasional"],["assets/kerja-kas.jpg","Pengelolaan kas"]] }
+];
+
+const ORG = [
+  { years:"2 Tahun", title:"Bendahara I Kelas (merangkap Sekretaris)", desc:"SMAN 1 Gondangwetan — mengelola dan mencatat keuangan kas kelas secara rutin." },
+  { years:"1 Tahun", title:"Bendahara III Kelas", desc:"Sekolah Menengah Pertama — memegang dan mengelola tabungan kelas." }
+];
+
+const THESIS_FIELDS = [
+  ["Latar Belakang","Penurunan financial performance BUMN akibat pandemi, disertai percepatan digital transformation dan kebutuhan pengelolaan cash holding."],
+  ["Tujuan","Menganalisis pengaruh cash holding dan digital transformation terhadap financial performance perusahaan induk BUMN Indonesia."],
+  ["Metode","Kuantitatif eksplanatori, purposive sampling atas 15 perusahaan (75 observasi), Moderated Regression Analysis (MRA)."],
+  ["Hasil Utama","Cash holding berpengaruh positif dan signifikan; digital transformation positif namun tidak signifikan, efek moderasi juga tidak signifikan."]
+];
+
+const CERT_TAGS = ["Manajemen SDM","Manajemen Operasi","Perilaku Organisasi","Kewirausahaan","Perilaku Konsumen"];
+const SKILL_TECH = ["Digital Marketing","Financial Analysis","Risk Analysis","Product Research","Sales & Marketing"];
+const SKILL_SOFT = ["Communication","Leadership","Team Management","Planning & Scheduling"];
+
+function Chevron({open}){
+  return <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 8l5 5 5-5" stroke="currentColor" strokeWidth="2" fill="none"/></svg>;
+}
+
+function useReveal(){
+  const ref = useRef(null);
+  const [visible,setVisible] = useState(false);
+  useEffect(()=>{
+    const el = ref.current;
+    if(!el) return;
+    if(!('IntersectionObserver' in window)){ setVisible(true); return; }
+    const io = new IntersectionObserver((entries)=>{
+      if(entries[0].isIntersecting){ setVisible(true); io.unobserve(el); }
+    }, {threshold:.12});
+    io.observe(el);
+    const t = setTimeout(()=>setVisible(true), 2500);
+    return ()=>{ io.disconnect(); clearTimeout(t); };
+  },[]);
+  return [ref, visible];
+}
+
+function Reveal({as:Tag="div", className="", children}){
+  const [ref, visible] = useReveal();
+  return <Tag ref={ref} className={"reveal" + (visible ? " in" : "") + (className ? " " + className : "")}>{children}</Tag>;
+}
+
+function Toggle({label, children}){
+  const [open,setOpen] = useState(false);
+  return (
+    <React.Fragment>
+      <button className="toggle" aria-expanded={open} onClick={()=>setOpen(!open)}>{label} <Chevron open={open}/></button>
+      <div className={"panel" + (open ? " open" : "")}><div className="panel-inner">{children}</div></div>
+    </React.Fragment>
+  );
+}
+
+function ExperienceCard({item, index}){
+  return (
+    <div className="exp-card">
+      <div className="exp-num">{"0" + (index+1)}</div>
+      <div className="exp-date">{item.date}</div>
+      <h3>{item.title}</h3>
+      <div className="exp-org">{item.org}</div>
+      <Toggle label="Lihat detail & foto">
+        <ul>{item.bullets.map((b,i)=>(<li key={i}>{b}</li>))}</ul>
+        <div className="photos">
+          {item.photos.map((p,i)=>(<img key={i} className={p[2]?"wide":""} src={p[0]} alt={p[1]} loading="lazy"/>))}
+        </div>
+      </Toggle>
+    </div>
+  );
+}
+
+function Header(){
+  const [scrolled,setScrolled] = useState(false);
+  useEffect(()=>{
+    const onScroll = ()=> setScrolled((window.scrollY||0) > 8);
+    window.addEventListener('scroll', onScroll, {passive:true});
+    return ()=> window.removeEventListener('scroll', onScroll);
+  },[]);
+  return (
+    <header className={scrolled ? "scrolled" : ""}>
+      <div className="wrap bar">
+        <span className="brand">Mirwakhatul<span>.</span></span>
+        <a className="cta" href="https://wa.me/6282122949448" target="_blank" rel="noopener">Hubungi Saya</a>
       </div>
-    </div>
-    <div class="portrait">
-      <img src="assets/hero-portrait.png" alt="Foto Mirwakhatul Jannah" width="250" height="373">
-    </div>
-  </div>
-</section>
+    </header>
+  );
+}
 
-<div class="wrap"><div class="rule"></div></div>
+function BackToTop(){
+  const [show,setShow] = useState(false);
+  useEffect(()=>{
+    const onScroll = ()=> setShow((window.scrollY||0) > 500);
+    window.addEventListener('scroll', onScroll, {passive:true});
+    return ()=> window.removeEventListener('scroll', onScroll);
+  },[]);
+  return (
+    <button id="totop" className={show ? "show" : ""} aria-label="Kembali ke atas" onClick={()=>window.scrollTo({top:0,behavior:'smooth'})}>
+      <svg viewBox="0 0 20 20"><path d="M5 12l5-5 5 5" stroke="currentColor" strokeWidth="2" fill="none"/></svg>
+    </button>
+  );
+}
 
-<section id="tentang">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Tentang Saya</h2>
-    </div>
-    <div class="about-card reveal">
-      <p>Lulusan Administrasi Bisnis dengan pemahaman menyeluruh tentang manajemen operasi, keuangan, SDM, dan perilaku konsumen. Sejak SMP dipercaya memegang tabungan kelas sebagai Bendahara III, lalu di SMA menjadi Bendahara I sekaligus sesekali merangkap Sekretaris Kelas — sejalan dengan Ibu yang menjabat Bendahara Puskesmas dan Ayah sebagai Bendahara Dusun di waktu yang sama. Dari sana tumbuh kebiasaan teliti dan disiplin mengelola keuangan yang terbawa hingga bangku kuliah dan dunia kerja.</p>
-    </div>
-  </div>
-</section>
+function App(){
+  return (
+    <React.Fragment>
+      <Header/>
 
-<section id="pengalaman" class="ledger">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Pengalaman</h2>
-    </div>
-
-    <div class="tl-item reveal">
-      <div class="tl-top">
-        <div class="tl-date">Sep – Des 2025</div>
-        <div class="tl-body">
-          <h3>Magang Industri (MBKM) — Asisten Manajer SDM &amp; Pengadaan</h3>
-          <div class="tl-org">PT Sinergi Gula Nusantara, PG Kedawoeng — Kab. Pasuruan</div>
-          <button class="tl-toggle" aria-expanded="false">Lihat detail &amp; foto <svg viewBox="0 0 20 20"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
-          <div class="tl-panel"><div class="tl-panel-inner">
-            <ul>
-              <li>Membantu pengelolaan data karyawan.</li>
-              <li>Melakukan administrasi dan pengarsipan dokumen.</li>
-              <li>Membantu proses administrasi kepegawaian.</li>
-              <li>Mendukung kegiatan pelatihan dan pengembangan SDM.</li>
-              <li>Melakukan koordinasi dengan tim terkait dalam kegiatan operasional divisi.</li>
-            </ul>
-            <div class="tl-photos">
-              <img class="wide" src="assets/magang-kantor.jpg" alt="Kantor PG Kedawoeng" loading="lazy">
-              <img src="assets/magang-1.jpg" alt="Kegiatan magang 1" loading="lazy">
-              <img src="assets/magang-2.jpg" alt="Kegiatan magang 2" loading="lazy">
-              <img src="assets/magang-3.jpg" alt="Kegiatan magang 3" loading="lazy">
-              <img src="assets/magang-4.jpg" alt="Kegiatan magang 4" loading="lazy">
+      <section className="hero">
+        <div className="blob b1"></div>
+        <div className="blob b2"></div>
+        <div className="wrap grid">
+          <div>
+            <span className="eyebrow">Portofolio</span>
+            <h1>Mirwakhatul Jannah</h1>
+            <p className="role">Fresh Graduate — Administrasi Bisnis</p>
+            <p className="lede">Teliti, mudah beradaptasi, dan terbiasa memegang tanggung jawab keuangan sejak sekolah. Siap berkontribusi di bidang Finance & Administration, SDM, atau Pemasaran.</p>
+            <p className="edu"><b>S1 Administrasi Bisnis</b> — Universitas Yudharta Pasuruan · IPK 3,4</p>
+            <div className="actions">
+              <a className="btn primary" href="mailto:mirwakhatuljannah.01@gmail.com">Kirim Email</a>
+              <a className="btn ghost" href="https://wa.me/6282122949448" target="_blank" rel="noopener">WhatsApp</a>
             </div>
-          </div></div>
+          </div>
+          <div className="portrait">
+            <img src="assets/hero-portrait.png" alt="Foto Mirwakhatul Jannah" width="260" height="388"/>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <div class="tl-item reveal">
-      <div class="tl-top">
-        <div class="tl-date">Jan 2024 – Jul 2025</div>
-        <div class="tl-body">
-          <h3>Karyawan Operasional — DFC Cafe &amp; Resto</h3>
-          <div class="tl-org">CV. D'Umbulan Management — Kab. Pasuruan</div>
-          <button class="tl-toggle" aria-expanded="false">Lihat detail &amp; foto <svg viewBox="0 0 20 20"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
-          <div class="tl-panel"><div class="tl-panel-inner">
-            <ul>
-              <li>Melakukan perhitungan dan pencatatan keuangan operasional.</li>
-              <li>Menangani pelayanan pelanggan.</li>
-              <li>Melakukan aktivitas sales dan marketing.</li>
-              <li>Membantu pengelolaan distribusi barang serta operasional cabang.</li>
-              <li>Membantu proses produksi di dapur pusat.</li>
-            </ul>
-            <div class="tl-photos">
-              <img class="wide" src="assets/kerja-dfc.jpg" alt="DFC Cafe & Resto" loading="lazy">
-              <img src="assets/kerja-catatan.jpg" alt="Catatan keuangan operasional" loading="lazy">
-              <img src="assets/kerja-kas.jpg" alt="Pengelolaan kas" loading="lazy">
+      <section id="tentang">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <span className="eyebrow">Tentang</span>
+            <h2>Kenalan lebih dekat</h2>
+          </Reveal>
+          <Reveal as="div" className="about-card">
+            <p>Lulusan Administrasi Bisnis dengan pemahaman menyeluruh tentang manajemen operasi, keuangan, SDM, dan perilaku konsumen. Sejak SMP dipercaya memegang tabungan kelas sebagai Bendahara III, lalu di SMA menjadi Bendahara I sekaligus sesekali merangkap Sekretaris Kelas — sejalan dengan Ibu yang menjabat Bendahara Puskesmas dan Ayah sebagai Bendahara Dusun di waktu yang sama. Dari sana tumbuh kebiasaan teliti dan disiplin mengelola keuangan yang terbawa hingga bangku kuliah dan dunia kerja.</p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="pengalaman" className="soft">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <span className="eyebrow">Pengalaman</span>
+            <h2>Rekam jejak kerja</h2>
+          </Reveal>
+          {EXPERIENCE.map((item,i)=>(
+            <Reveal key={i}><ExperienceCard item={item} index={i}/></Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section id="organisasi">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <span className="eyebrow">Organisasi</span>
+            <h2>Pengalaman Organisasi</h2>
+          </Reveal>
+          <Reveal as="div" className="org-grid">
+            {ORG.map((o,i)=>(
+              <div className="org-card" key={i}>
+                <span className="badge">{o.years}</span>
+                <h3>{o.title}</h3>
+                <p>{o.desc}</p>
+              </div>
+            ))}
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="skripsi" className="soft">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <span className="eyebrow">Akademik</span>
+            <h2>Proyek Skripsi</h2>
+          </Reveal>
+          <Reveal as="div" className="thesis">
+            <h3>Cash Holding dan Financial Performance, serta Digital Transformation sebagai Moderasi pada Perusahaan Induk BUMN Indonesia</h3>
+            <Toggle label="Lihat detail penelitian">
+              <dl>
+                {THESIS_FIELDS.map((f,i)=>(<div key={i}><dt>{f[0]}</dt><dd>{f[1]}</dd></div>))}
+              </dl>
+            </Toggle>
+          </Reveal>
+        </div>
+      </section>
+
+      <section id="sertifikasi">
+        <div className="wrap">
+          <Reveal className="section-head">
+            <span className="eyebrow">Kompetensi</span>
+            <h2>Sertifikasi & Keahlian</h2>
+          </Reveal>
+          <Reveal as="div" className="cs-grid">
+            <div>
+              <div className="cert-wrap"><img src="assets/sertifikat.jpg" alt="Sertifikat Pelatihan Kompetensi Mahasiswa 2026" loading="lazy"/></div>
+              <div className="cert-meta">Pelatihan Kompetensi Mahasiswa 2026 — UPT Kewirausahaan & Pengembangan Karier, Univ. Yudharta Pasuruan</div>
+              <div className="chip-row">{CERT_TAGS.map((t,i)=>(<span className="chip" key={i}>{t}</span>))}</div>
             </div>
-          </div></div>
+            <div>
+              <div className="skill-col">
+                <h3>Technical Skills</h3>
+                <div className="chip-row">{SKILL_TECH.map((t,i)=>(<span className="chip amber" key={i}>{t}</span>))}</div>
+              </div>
+              <div className="skill-col">
+                <h3>Soft Skills</h3>
+                <div className="chip-row">{SKILL_SOFT.map((t,i)=>(<span className="chip" key={i}>{t}</span>))}</div>
+              </div>
+            </div>
+          </Reveal>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
-<section id="organisasi">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Pengalaman Organisasi</h2>
-    </div>
-    <div class="org-grid reveal">
-      <div class="org-card">
-        <span class="badge">2 Tahun</span>
-        <h3>Bendahara I Kelas (merangkap Sekretaris)</h3>
-        <p>SMAN 1 Gondangwetan — mengelola dan mencatat keuangan kas kelas secara rutin.</p>
-      </div>
-      <div class="org-card">
-        <span class="badge">1 Tahun</span>
-        <h3>Bendahara III Kelas</h3>
-        <p>Sekolah Menengah Pertama — memegang dan mengelola tabungan kelas.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="skripsi" class="ledger">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Proyek Akademik</h2>
-    </div>
-    <div class="thesis reveal">
-      <h3>Cash Holding dan Financial Performance, serta Digital Transformation sebagai Moderasi pada Perusahaan Induk BUMN Indonesia</h3>
-      <button class="tl-toggle" aria-expanded="false">Lihat detail penelitian <svg viewBox="0 0 20 20"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
-      <div class="tl-panel"><div class="tl-panel-inner">
-        <dl>
-          <div><dt>Latar Belakang</dt><dd>Penurunan financial performance BUMN akibat pandemi, disertai percepatan digital transformation dan kebutuhan pengelolaan cash holding.</dd></div>
-          <div><dt>Tujuan</dt><dd>Menganalisis pengaruh cash holding dan digital transformation terhadap financial performance perusahaan induk BUMN Indonesia.</dd></div>
-          <div><dt>Metode</dt><dd>Kuantitatif eksplanatori, purposive sampling atas 15 perusahaan (75 observasi), Moderated Regression Analysis (MRA).</dd></div>
-          <div><dt>Hasil Utama</dt><dd>Cash holding berpengaruh positif dan signifikan; digital transformation positif namun tidak signifikan, efek moderasi juga tidak signifikan.</dd></div>
-        </dl>
-      </div></div>
-    </div>
-  </div>
-</section>
-
-<section id="sertifikasi">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2><svg class="clip" viewBox="0 0 100 100"><path d="M30 20 L30 65 A15 15 0 0 0 60 65 L60 30 A8 8 0 0 0 44 30 L44 58"/></svg>Sertifikasi &amp; Keahlian</h2>
-    </div>
-    <div class="cs-grid reveal">
-      <div>
-        <div class="cert-wrap"><img src="assets/sertifikat.jpg" alt="Sertifikat Pelatihan Kompetensi Mahasiswa 2026" loading="lazy"></div>
-        <div class="cert-meta">Pelatihan Kompetensi Mahasiswa 2026 — UPT Kewirausahaan &amp; Pengembangan Karier, Univ. Yudharta Pasuruan</div>
-        <div class="chip-row">
-          <span class="chip">Manajemen SDM</span>
-          <span class="chip">Manajemen Operasi</span>
-          <span class="chip">Perilaku Organisasi</span>
-          <span class="chip">Kewirausahaan</span>
-          <span class="chip">Perilaku Konsumen</span>
-        </div>
-      </div>
-      <div>
-        <div class="skill-col">
-          <h3>Technical Skills</h3>
-          <div class="logos">
-            <img src="assets/logo-office.png" alt="Microsoft Office">
-            <img src="assets/logo-google.png" alt="Google Workspace">
-          </div>
-          <div class="chip-row">
-            <span class="chip">Digital Marketing</span>
-            <span class="chip">Financial Analysis</span>
-            <span class="chip">Risk Analysis</span>
-            <span class="chip">Product Research</span>
-            <span class="chip">Sales &amp; Marketing</span>
+      <footer id="kontak">
+        <div className="wrap">
+          <Reveal as="h2">Mari terhubung</Reveal>
+          <Reveal as="p" className="msg">Terima kasih telah meluangkan waktu melihat portofolio saya. Saya terbuka untuk kesempatan kerja di bidang Finance & Administration.</Reveal>
+          <Reveal as="div" className="contact-list">
+            <div><span className="k">Email</span><a href="mailto:mirwakhatuljannah.01@gmail.com">mirwakhatuljannah.01@gmail.com</a></div>
+            <div><span className="k">WhatsApp</span><a href="https://wa.me/6282122949448" target="_blank" rel="noopener">+62 821-2294-9448</a></div>
+            <div><span className="k">Lokasi</span><span style={{fontWeight:700}}>Pasuruan, Jawa Timur</span></div>
+          </Reveal>
+          <div className="foot-rule">
+            <span>© 2026 Mirwakhatul Jannah</span>
+            <span>Dibuat dari portofolio pribadi</span>
           </div>
         </div>
-        <div class="skill-col">
-          <h3>Soft Skills</h3>
-          <div class="chip-row">
-            <span class="chip">Communication</span>
-            <span class="chip">Leadership</span>
-            <span class="chip">Team Management</span>
-            <span class="chip">Planning &amp; Scheduling</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </footer>
 
-<footer id="kontak">
-  <div class="wrap">
-    <h2 class="reveal">Mari terhubung</h2>
-    <p class="msg reveal">Terima kasih telah meluangkan waktu melihat portofolio saya. Saya terbuka untuk kesempatan kerja di bidang Finance &amp; Administration.</p>
-    <div class="contact-list reveal">
-      <div><span>Email</span><a href="mailto:mirwakhatuljannah.01@gmail.com">mirwakhatuljannah.01@gmail.com</a></div>
-      <div><span>WhatsApp</span><a href="https://wa.me/6282122949448" target="_blank" rel="noopener">+62 821-2294-9448</a></div>
-      <div><span>Lokasi</span><span style="width:auto;color:var(--paper);font-weight:600;">Pasuruan, Jawa Timur</span></div>
-    </div>
-    <div class="foot-rule">
-      <span>© 2026 Mirwakhatul Jannah</span>
-      <span>Dibuat dari portofolio pribadi</span>
-    </div>
-  </div>
-</footer>
+      <BackToTop/>
+    </React.Fragment>
+  );
+}
 
-<button id="totop" aria-label="Kembali ke atas">
-  <svg viewBox="0 0 20 20"><path d="M5 12l5-5 5 5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-</button>
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
 
 <script>
 (function(){
-  // header shadow on scroll
-  var header = document.getElementById('siteHeader');
-  var totop = document.getElementById('totop');
-  window.addEventListener('scroll', function(){
-    var y = window.scrollY || document.documentElement.scrollTop;
-    header.classList.toggle('scrolled', y > 8);
-    totop.classList.toggle('show', y > 500);
-  }, {passive:true});
-
-  totop.addEventListener('click', function(){
-    window.scrollTo({top:0, behavior:'smooth'});
-  });
-
-  // small helper: works even on very old browsers without NodeList.forEach
-  function each(list, fn){ for(var i=0;i<list.length;i++){ fn(list[i]); } }
-
-  // reveal on scroll
-  var reveals = document.querySelectorAll('.reveal');
-  var revealNow = function(){ each(reveals, function(el){ el.classList.add('in'); }); };
-  if('IntersectionObserver' in window){
-    var io = new IntersectionObserver(function(entries){
-      each(entries, function(e){
-        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, {threshold:.12});
-    each(reveals, function(el){ io.observe(el); });
-    // safety net: if an observer ever fails to fire (older/unusual browsers), never leave content hidden
-    setTimeout(revealNow, 2500);
-  } else {
-    revealNow();
-  }
-
-  // accordion toggles (experience + thesis)
-  each(document.querySelectorAll('.tl-toggle'), function(btn){
-    var panel = btn.parentElement.querySelector('.tl-panel');
-    btn.addEventListener('click', function(){
-      var open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      panel.style.maxHeight = open ? '0px' : (panel.scrollHeight + 'px');
-    });
-  });
-  // recalc open panels on image load so max-height stays accurate
-  window.addEventListener('load', function(){
-    each(document.querySelectorAll('.tl-panel img'), function(img){
-      img.addEventListener('load', function(){
-        var panel = img.parentElement && img.parentElement.parentElement;
-        if(panel && panel.className.indexOf('tl-panel') !== -1 && panel.style.maxHeight && panel.style.maxHeight !== '0px'){
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-        }
-      });
-    });
-  });
+  var src = document.getElementById('app-source').textContent;
+  var code = Babel.transform(src, { presets: [['react', {runtime:'classic'}]] }).code;
+  var s = document.createElement('script');
+  s.textContent = code;
+  document.body.appendChild(s);
 })();
 </script>
-
 </body>
 </html>

@@ -19,6 +19,7 @@
     --max:1040px; --r:22px;
   }
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  img{max-width:100%;height:auto;}
   html{scroll-behavior:smooth;}
   @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
   body{margin:0;background:var(--bg);color:var(--ink);font-family:"Manrope",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
@@ -242,8 +243,7 @@ function useReveal(){
       if(entries[0].isIntersecting){ setVisible(true); io.unobserve(el); }
     }, {threshold:.12});
     io.observe(el);
-    const t = setTimeout(()=>setVisible(true), 2500);
-    return ()=>{ io.disconnect(); clearTimeout(t); };
+    return ()=>{ io.disconnect(); };
   },[]);
   return [ref, visible];
 }
